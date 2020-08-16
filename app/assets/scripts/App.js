@@ -1,1 +1,2 @@
-alert("The sky is red");
+import '../styles/styles.css'
+alert("The sky is blue");
