@@ -17,22 +17,22 @@ module.exports = {
     // Make the file expanded and commented instead of single line, no white space and no comments
     mode: 'development',
     
-    // Set Webpack to watch for App.js to be saved
-    // When App.js is saved, Webpack will bundle up a new bundled.js file
+    // Set Webpack to watch for saved files
+    // e.g. When App.js is saved, Webpack will bundle up a new bundled.js file
     // To stop Webpack from watching App.js for save events, enter Control+C in Terminal
     watch: true,
 
-    // Tell Webpack what to do with certain files
+    // Tell Webpack what to do with certain files when they are saved
     module: { 
         // Set an array
-        // Will use to tell Webpack to do something different depending on file type
+        // Will be used to tell Webpack to do something different depending on file type
         rules: [ 
             // CSS Files
             { 
                 // Check files for '.css' extension
                 test: /\.css$/i,
                 // If a file has a '.css' extension, use the packages in the 'use' array to process them
-                // style-loader applies css in the browser, css-loader enables Wepack to read and bundle css files
+                // style-loader injects css into the browser, css-loader enables Wepack to read and bundle css files
                 use: ['style-loader', 'css-loader'],
             } 
         ]
